@@ -1,19 +1,25 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Container } from "@/components/ui/container"
-import { SectionHeader } from "@/components/ui/section-header"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { products } from "@/data"
-import { Package, Clock, Truck, MessageCircle } from "lucide-react"
-import { getWhatsAppUrl } from "@/lib/utils"
+import { motion } from "framer-motion";
+import { Container } from "@/components/ui/container";
+import { SectionHeader } from "@/components/ui/section-header";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { products } from "@/data";
+import { Package, Clock, Truck, MessageCircle } from "lucide-react";
+import { getWhatsAppUrl } from "@/lib/utils";
 
 export function ProductsSection() {
   const handleProductInquiry = (productName: string) => {
-    const message = `Hello! I'm interested in getting a quote for ${productName}. Please provide pricing and availability details for export to UAE.`
-    window.open(getWhatsAppUrl(message), "_blank")
-  }
+    const message = `Hello! I'm interested in getting a quote for ${productName}. Please provide pricing and availability details for export to UAE.`;
+    window.open(getWhatsAppUrl(message), "_blank");
+  };
 
   return (
     <section className="py-16 md:py-24 bg-background">
@@ -49,14 +55,16 @@ export function ProductsSection() {
                   </p>
                 </CardHeader>
 
-                <CardContent className="flex-grow space-y-4 pt-0">
+                <CardContent className="grow space-y-4 pt-0">
                   {/* Key Features */}
                   <div>
-                    <h4 className="text-sm font-medium text-foreground mb-2">Key Features:</h4>
+                    <h4 className="text-sm font-medium text-foreground mb-2">
+                      Key Features:
+                    </h4>
                     <ul className="text-xs text-muted-foreground space-y-1">
                       {product.features.slice(0, 3).map((feature, idx) => (
                         <li key={idx} className="flex items-start">
-                          <span className="w-1 h-1 bg-primary rounded-full mt-2 mr-2 flex-shrink-0" />
+                          <span className="w-1 h-1 bg-primary rounded-full mt-2 mr-2 shrink-0" />
                           {feature}
                         </li>
                       ))}
@@ -66,7 +74,9 @@ export function ProductsSection() {
                   {/* Packaging Info */}
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <Package className="w-3 h-3" />
-                    <span>Available: {product.packaging.slice(0, 3).join(", ")}</span>
+                    <span>
+                      Available: {product.packaging.slice(0, 3).join(", ")}
+                    </span>
                   </div>
 
                   {/* Shelf Life */}
@@ -110,11 +120,15 @@ export function ProductsSection() {
             Need Custom Packaging or Bulk Quantities?
           </h3>
           <p className="text-muted-foreground">
-            We offer flexible packaging solutions and competitive pricing for large orders. 
-            Contact us to discuss your specific requirements.
+            We offer flexible packaging solutions and competitive pricing for
+            large orders. Contact us to discuss your specific requirements.
           </p>
           <Button
-            onClick={() => document.getElementById("inquiry-form")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document
+                .getElementById("inquiry-form")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground"
           >
@@ -123,5 +137,5 @@ export function ProductsSection() {
         </motion.div>
       </Container>
     </section>
-  )
+  );
 }

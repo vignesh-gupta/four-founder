@@ -73,28 +73,59 @@ export function ExportCapabilitiesSection() {
           <h3 className="font-serif text-2xl font-semibold text-foreground text-center mb-8">
             Our Export Process
           </h3>
-          <div className="grid md:grid-cols-5 gap-4">
+          
+          {/* Mobile Timeline - Vertical */}
+          <div className="md:hidden space-y-6">
             {exportSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="text-center"
+                className="flex items-start gap-4"
               >
-                <div className="relative">
-                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                <div className="shrink-0 relative">
+                  <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">
                     {step.step}
                   </div>
                   {index < exportSteps.length - 1 && (
-                    <div className="hidden md:block absolute top-6 left-12 w-full h-0.5 bg-primary/20"></div>
+                    <div className="absolute top-10 left-5 w-0.5 h-6 bg-primary/20"></div>
                   )}
                 </div>
-                <h4 className="font-medium text-foreground mb-2">{step.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                <div className="flex-1 pt-1">
+                  <h4 className="font-medium text-foreground mb-1">{step.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Desktop Timeline - Horizontal */}
+          <div className="hidden md:block relative">
+            {/* Timeline line */}
+            <div className="absolute top-6 left-6 right-6 h-0.5 bg-primary/20"></div>
+            
+            <div className="grid grid-cols-5 gap-4">
+              {exportSteps.map((step, index) => (
+                <motion.div
+                  key={step.step}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 * index }}
+                  className="text-center relative"
+                >
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4 border-4 border-background shadow-lg">
+                      {step.step}
+                    </div>
+                  </div>
+                  <h4 className="font-medium text-foreground mb-2">{step.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
 

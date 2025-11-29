@@ -1,31 +1,34 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Container } from "@/components/ui/container"
-import { Button } from "@/components/ui/button"
-import { MessageCircle, Mail } from "lucide-react"
-import { getWhatsAppUrl } from "@/lib/utils"
+import { motion } from "framer-motion";
+import { Container } from "@/components/ui/container";
+import { Button } from "@/components/ui/button";
+import { MessageCircle, Mail } from "lucide-react";
+import { getWhatsAppUrl } from "@/lib/utils";
 
 export function HeroSection() {
   const handleWhatsAppClick = () => {
-    const message = "Hello! I'm interested in learning more about Four Founders Garlic Company's premium garlic products for export to UAE. Please provide more information about bulk orders."
-    window.open(getWhatsAppUrl(message), "_blank")
-  }
+    const message =
+      "Hello! I'm interested in learning more about Four Founders Garlic Company's premium garlic products for export to UAE. Please provide more information about bulk orders.";
+    window.open(getWhatsAppUrl(message), "_blank");
+  };
 
   const handleInquiryClick = () => {
-    document.getElementById("inquiry-form")?.scrollIntoView({ behavior: "smooth" })
-  }
+    document
+      .getElementById("inquiry-form")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted/30 to-secondary/20">
+    <section className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-background via-muted/30 to-secondary/20">
       {/* Background texture overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-40"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='a' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='10' cy='10' r='1' fill='%23000' opacity='0.05'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='20' height='20' fill='url(%23a)'/%3E%3C/svg%3E")`
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='a' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='10' cy='10' r='1' fill='%23000' opacity='0.05'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='20' height='20' fill='url(%23a)'/%3E%3C/svg%3E")`,
         }}
       ></div>
-      
+
       <Container className="relative z-10">
         <div className="text-center space-y-8">
           <motion.div
@@ -36,7 +39,9 @@ export function HeroSection() {
           >
             {/* Logo placeholder */}
             <div className="mx-auto w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center border-2 border-primary/20">
-              <span className="font-serif font-bold text-2xl text-primary">4F</span>
+              <span className="font-serif font-bold text-2xl text-primary">
+                4F
+              </span>
             </div>
 
             {/* Main headline */}
@@ -48,16 +53,26 @@ export function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Four founders united by a commitment to sustainable farming and excellence. 
-              Delivering naturally grown, hand-sorted premium garlic with the bold flavor and exceptional quality your business demands.
+              Four founders united by a commitment to sustainable farming and
+              excellence. Delivering naturally grown, hand-sorted premium garlic
+              with the bold flavor and exceptional quality your business
+              demands.
             </p>
 
             {/* Value propositions */}
             <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-primary">
-              <span className="bg-primary/10 px-3 py-1 rounded-full">Premium Quality</span>
-              <span className="bg-primary/10 px-3 py-1 rounded-full">Natural Farming</span>
-              <span className="bg-primary/10 px-3 py-1 rounded-full">Export Ready</span>
-              <span className="bg-primary/10 px-3 py-1 rounded-full">UAE Delivery</span>
+              <span className="bg-primary/10 px-3 py-1 rounded-full">
+                Premium Quality
+              </span>
+              <span className="bg-primary/10 px-3 py-1 rounded-full">
+                Natural Farming
+              </span>
+              <span className="bg-primary/10 px-3 py-1 rounded-full">
+                Export Ready
+              </span>
+              <span className="bg-primary/10 px-3 py-1 rounded-full">
+                UAE Delivery
+              </span>
             </div>
           </motion.div>
 
@@ -123,5 +138,5 @@ export function HeroSection() {
         </div>
       </motion.div>
     </section>
-  )
+  );
 }
