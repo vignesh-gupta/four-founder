@@ -50,7 +50,7 @@ export function ExportCapabilitiesSection() {
     {
       step: "5",
       title: "Port Delivery",
-      description: "Direct delivery to UAE ports with tracking support",
+      description: "Direct delivery to Global ports with tracking support",
     },
   ];
 
@@ -59,7 +59,7 @@ export function ExportCapabilitiesSection() {
       <Container>
         <SectionHeader
           subtitle="Export Capabilities"
-          title="From India to UAE with Excellence"
+          title="From India to Global with Excellence"
           description="Streamlined export processes and comprehensive support for seamless international trade"
           className="mb-16"
         />
@@ -174,7 +174,7 @@ export function ExportCapabilitiesSection() {
           })}
         </div>
 
-        {/* UAE Focus Section */}
+        {/* Global Focus Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -184,10 +184,10 @@ export function ExportCapabilitiesSection() {
         >
           <div className="max-w-4xl mx-auto">
             <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">
-              Specialized UAE Market Expertise
+              Specialized Global Market Expertise
             </h3>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              With deep understanding of UAE import regulations and market
+              With deep understanding of Global import regulations and market
               preferences, we ensure smooth delivery to major ports including
               Dubai, Abu Dhabi, and Sharjah. Our established shipping routes and
               documentation expertise eliminate delays and complications.

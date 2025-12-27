@@ -5,18 +5,25 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const CONTACT_NUMBER = "+919987057317";
+export const MAIN_CONTACT = "+919076033699";
 
-export function getWhatsAppUrl(message: string, phoneNumber = CONTACT_NUMBER) {
+export const CONTACT_PREFIX = "9190760336";
+export const ALL_CONTACTS = ["99", "77", "55", "44"]
+
+export function getWhatsAppUrl(message: string, phoneNumber = MAIN_CONTACT) {
   const encodedMessage = encodeURIComponent(message);
   return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 }
 
 export function getFormattedPhoneNumber(
-  rawNumber: string = CONTACT_NUMBER
+  rawNumber: string = MAIN_CONTACT
 ): string {
   // Remove all non-digit characters
   const digits = rawNumber.replace(/\D/g, "");
+
+  if(digits.length < 10) {
+    return rawNumber; // Return as is if not enough digits
+  }
 
   // Format the number as +XX XXX XXX XXXX (assuming country code is 2 digit)
   if (digits.length === 12) {

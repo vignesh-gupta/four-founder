@@ -9,7 +9,7 @@ import { getWhatsAppUrl } from "@/lib/utils";
 export function HeroSection() {
   const handleWhatsAppClick = () => {
     const message =
-      "Hello! I'm interested in learning more about Four Founders Garlic Company's premium garlic products for export to UAE. Please provide more information about bulk orders.";
+      "Hello! I'm interested in learning more about Four Founders Garlic Company's premium garlic products for export to Global. Please provide more information about bulk orders.";
     window.open(getWhatsAppUrl(message), "_blank");
   };
 
@@ -73,7 +73,7 @@ export function HeroSection() {
                 Export Ready
               </span>
               <span className="bg-primary/10 px-3 py-1 rounded-full">
-                UAE Delivery
+                Global Delivery
               </span>
             </div>
           </motion.div>
@@ -118,7 +118,7 @@ export function HeroSection() {
               <span>FSSAI Certified</span>
               <span>APEDA Registered</span>
               <span>Export Documentation</span>
-              <span>UAE Port Delivery</span>
+              <span>Global Port Delivery</span>
             </div>
           </motion.div>
         </div>

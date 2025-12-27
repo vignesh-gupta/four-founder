@@ -57,7 +57,7 @@ export function AboutSection() {
                 </p>
                 <p>
                   Specializing in premium garlic varieties, we focus on delivering fresh, flavorful, 
-                  and naturally grown garlic to UAE markets. Every bulb carries the essence of careful 
+                  and naturally grown garlic to Global markets. Every bulb carries the essence of careful 
                   cultivation, responsible farming practices, and the combined expertise of our founders.
                 </p>
                 <p>
@@ -74,7 +74,7 @@ export function AboutSection() {
               <p className="text-muted-foreground leading-relaxed">
                 To provide customers with fresh, flavorful, and sustainably grown garlic while honoring 
                 the values and teamwork that define our four founders - connecting Indian agriculture 
-                excellence with UAE business markets.
+                excellence with Global business markets.
               </p>
             </div>
           </motion.div>

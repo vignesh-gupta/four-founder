@@ -89,7 +89,7 @@ export const usps: USP[] = [
   {
     id: "supply-chain",
     title: "Strong Supply Chain",
-    description: "Reliable delivery network with container-load capabilities to UAE ports",
+    description: "Reliable delivery network with container-load capabilities to Global ports",
     icon: "truck"
   },
   {
@@ -120,9 +120,9 @@ export const exportCapabilities: ExportCapability[] = [
     icon: "package"
   },
   {
-    id: "uae-delivery",
-    title: "Direct UAE Delivery",
-    description: "Established shipping routes to major UAE ports including Dubai and Abu Dhabi",
+    id: "Global-delivery",
+    title: "Direct Global Delivery",
+    description: "Established shipping routes to major Global ports including Dubai and Abu Dhabi",
     icon: "ship"
   },
   {

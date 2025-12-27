@@ -6,7 +6,7 @@ import { getWhatsAppUrl } from "@/lib/utils"
 
 export function WhatsAppButton() {
   const handleClick = () => {
-    const message = "Hello! I'm interested in Four Founders Garlic Company's premium products. Can you help me with more information about your garlic exports to UAE?"
+    const message = "Hello! I'm interested in Four Founders Garlic Company's premium products. Can you help me with more information about your garlic exports to Global?"
     window.open(getWhatsAppUrl(message), "_blank")
   }
 

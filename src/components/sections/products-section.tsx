@@ -17,7 +17,7 @@ import { getWhatsAppUrl } from "@/lib/utils";
 
 export function ProductsSection() {
   const handleProductInquiry = (productName: string) => {
-    const message = `Hello! I'm interested in getting a quote for ${productName}. Please provide pricing and availability details for export to UAE.`;
+    const message = `Hello! I'm interested in getting a quote for ${productName}. Please provide pricing and availability details for export to Global.`;
     window.open(getWhatsAppUrl(message), "_blank");
   };
 

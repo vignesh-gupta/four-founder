@@ -1,5 +1,9 @@
 import { Container } from "@/components/ui/container";
-import { CONTACT_NUMBER, getFormattedPhoneNumber } from "@/lib/utils";
+import {
+  ALL_CONTACTS,
+  CONTACT_PREFIX,
+  getFormattedPhoneNumber,
+} from "@/lib/utils";
 import { Leaf, Mail, MapPin, Phone } from "lucide-react";
 
 export function FooterSection() {
@@ -20,7 +24,7 @@ export function FooterSection() {
             <p className="text-background/80 leading-relaxed">
               Premium Indian garlic company dedicated to sustainable farming and
               exceptional quality. Four founders, one vision - delivering
-              excellence to UAE markets.
+              excellence to Global markets.
             </p>
             <div className="flex flex-col space-y-2 text-sm">
               <span className="text-primary font-medium">
@@ -50,7 +54,7 @@ export function FooterSection() {
             <ul className="space-y-2 text-background/80">
               <li>Bulk Orders</li>
               <li>Custom Packaging</li>
-              <li>UAE Port Delivery</li>
+              <li>Global Port Delivery</li>
               <li>Documentation Support</li>
               <li>Quality Assurance</li>
             </ul>
@@ -77,12 +81,19 @@ export function FooterSection() {
               <div className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-primary" />
                 <div>
-                  <a
-                    href={`tel:${CONTACT_NUMBER}`}
-                    className="hover:text-primary transition-colors"
-                  >
-                    {getFormattedPhoneNumber()}
-                  </a>
+                  {ALL_CONTACTS.map((suffix, index) => (
+                    <>
+                      <a
+                        href={`tel:${CONTACT_PREFIX}${suffix}`}
+                        className="hover:text-primary transition-colors"
+                      >
+                        {getFormattedPhoneNumber(
+                          index === 0 ? CONTACT_PREFIX + suffix : suffix
+                        )}
+                      </a>
+                      {index < ALL_CONTACTS.length - 1 && " / "}
+                    </>
+                  ))}
                   <p className="text-xs text-background/60">
                     WhatsApp Available
                   </p>
@@ -92,7 +103,7 @@ export function FooterSection() {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 text-primary" />
                 <div>
-                  <p>Serving UAE Markets</p>
+                  <p>Serving Global Markets</p>
                   <p className="text-xs text-background/60">
                     Dubai • Abu Dhabi • Sharjah
                   </p>
@@ -133,7 +144,7 @@ export function FooterSection() {
               &copy; 2024 Four Founders Garlic Company. All rights reserved.
             </p>
             <p className="hidden md:block">•</p>
-            <p>Built for premium UAE market exports</p>
+            <p>Built for premium Global market exports</p>
           </div>
 
           <div className="flex gap-1 text-xs">

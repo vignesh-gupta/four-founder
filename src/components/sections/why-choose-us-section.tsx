@@ -30,7 +30,7 @@ export function WhyChooseUsSection() {
         <SectionHeader
           subtitle="Why Choose Us"
           title="Premium Quality, Trusted Service"
-          description="Our commitment to excellence and sustainable practices makes us your ideal partner for premium garlic exports to UAE"
+          description="Our commitment to excellence and sustainable practices makes us your ideal partner for premium garlic exports to Global"
           className="mb-16"
         />
 
@@ -77,7 +77,7 @@ export function WhyChooseUsSection() {
         >
           <div className="bg-background/50 p-8 rounded-2xl border border-border/10">
             <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
-              Trusted by UAE Importers
+              Trusted by Global Importers
             </h3>
             <div className="flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
               <div className="flex flex-col items-center">
