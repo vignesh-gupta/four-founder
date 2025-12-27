@@ -1,56 +1,58 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Container } from "@/components/ui/container"
-import { SectionHeader } from "@/components/ui/section-header"
-import { Card, CardContent } from "@/components/ui/card"
-import { exportCapabilities } from "@/data"
-import { 
-  Container as ContainerIcon, 
-  Package, 
-  Ship, 
-  FileText, 
-  Package2, 
-  Headphones 
-} from "lucide-react"
+import { motion } from "framer-motion";
+import { Container } from "@/components/ui/container";
+import { SectionHeader } from "@/components/ui/section-header";
+import { Card, CardContent } from "@/components/ui/card";
+import { exportCapabilities } from "@/data";
+import {
+  Container as ContainerIcon,
+  Package,
+  Ship,
+  FileText,
+  Package2,
+  Headphones,
+} from "lucide-react";
 
 const iconMap = {
-  "container": ContainerIcon,
-  "package": Package,
-  "ship": Ship,
+  container: ContainerIcon,
+  package: Package,
+  ship: Ship,
   "file-text": FileText,
   "package-2": Package2,
-  "headphones": Headphones
-}
+  headphones: Headphones,
+};
 
 export function ExportCapabilitiesSection() {
   const exportSteps = [
     {
       step: "1",
       title: "Order Confirmation",
-      description: "Submit requirements and receive detailed quotation with specifications"
+      description:
+        "Submit requirements and receive detailed quotation with specifications",
     },
     {
-      step: "2", 
+      step: "2",
       title: "Quality Assurance",
-      description: "Hand-sorting and quality verification before packaging"
+      description: "Hand-sorting and quality verification before packaging",
     },
     {
       step: "3",
-      title: "Export Documentation", 
-      description: "Prepare all certificates and shipping documents"
+      title: "Export Documentation",
+      description: "Prepare all certificates and shipping documents",
     },
     {
       step: "4",
       title: "Secure Packaging",
-      description: "Moisture-proof packaging designed for long-distance shipping"
+      description:
+        "Moisture-proof packaging designed for long-distance shipping",
     },
     {
       step: "5",
       title: "Port Delivery",
-      description: "Direct delivery to UAE ports with tracking support"
-    }
-  ]
+      description: "Direct delivery to UAE ports with tracking support",
+    },
+  ];
 
   return (
     <section className="py-16 md:py-24 bg-background">
@@ -73,7 +75,7 @@ export function ExportCapabilitiesSection() {
           <h3 className="font-serif text-2xl font-semibold text-foreground text-center mb-8">
             Our Export Process
           </h3>
-          
+
           {/* Mobile Timeline - Vertical */}
           <div className="md:hidden space-y-6">
             {exportSteps.map((step, index) => (
@@ -94,8 +96,12 @@ export function ExportCapabilitiesSection() {
                   )}
                 </div>
                 <div className="flex-1 pt-1">
-                  <h4 className="font-medium text-foreground mb-1">{step.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                  <h4 className="font-medium text-foreground mb-1">
+                    {step.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -105,7 +111,7 @@ export function ExportCapabilitiesSection() {
           <div className="hidden md:block relative">
             {/* Timeline line */}
             <div className="absolute top-6 left-6 right-6 h-0.5 bg-primary/20"></div>
-            
+
             <div className="grid grid-cols-5 gap-4">
               {exportSteps.map((step, index) => (
                 <motion.div
@@ -121,8 +127,12 @@ export function ExportCapabilitiesSection() {
                       {step.step}
                     </div>
                   </div>
-                  <h4 className="font-medium text-foreground mb-2">{step.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                  <h4 className="font-medium text-foreground mb-2">
+                    {step.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -130,10 +140,11 @@ export function ExportCapabilitiesSection() {
         </motion.div>
 
         {/* Capabilities Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="flex justify-center gap-8 mb-16 items-center">
           {exportCapabilities.map((capability, index) => {
-            const IconComponent = iconMap[capability.icon as keyof typeof iconMap] || Package
-            
+            const IconComponent =
+              iconMap[capability.icon as keyof typeof iconMap] || Package;
+
             return (
               <motion.div
                 key={capability.id}
@@ -141,6 +152,7 @@ export function ExportCapabilitiesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="flex-1 md:flex1/2 lg:flex-1/3"
               >
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-border/20">
                   <CardContent className="p-6 space-y-4">
@@ -158,7 +170,7 @@ export function ExportCapabilitiesSection() {
                   </CardContent>
                 </Card>
               </motion.div>
-            )
+            );
           })}
         </div>
 
@@ -175,28 +187,31 @@ export function ExportCapabilitiesSection() {
               Specialized UAE Market Expertise
             </h3>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              With deep understanding of UAE import regulations and market preferences, we ensure smooth 
-              delivery to major ports including Dubai, Abu Dhabi, and Sharjah. Our established shipping 
-              routes and documentation expertise eliminate delays and complications.
+              With deep understanding of UAE import regulations and market
+              preferences, we ensure smooth delivery to major ports including
+              Dubai, Abu Dhabi, and Sharjah. Our established shipping routes and
+              documentation expertise eliminate delays and complications.
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-8">
+
+            <div className="grid md:grid-cols-2 gap-8">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-2">15+ Days</div>
-                <div className="text-sm text-muted-foreground">Average Shipping Time</div>
+                <div className="text-2xl font-bold text-primary mb-2">
+                  15+ Days
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  Average Shipping Time
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary mb-2">100%</div>
-                <div className="text-sm text-muted-foreground">Documentation Support</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-2">5+ Years</div>
-                <div className="text-sm text-muted-foreground">UAE Export Experience</div>
+                <div className="text-sm text-muted-foreground">
+                  Documentation Support
+                </div>
               </div>
             </div>
           </div>
         </motion.div>
       </Container>
     </section>
-  )
+  );
 }

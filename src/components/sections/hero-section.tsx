@@ -39,16 +39,18 @@ export function HeroSection() {
           >
             {/* Logo placeholder */}
             <div className="mx-auto w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center border-2 border-primary/20">
-              <span className="font-serif font-bold text-2xl text-primary">
-                4F
-              </span>
+              <img
+                src="/logo.png"
+                alt="Four Founders Garlic Company Logo"
+                className="size-20 rounded-full"
+              />
             </div>
 
             {/* Main headline */}
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
               Premium Indian Garlic
               <br />
-              <span className="text-primary">For UAE Markets</span>
+              <span className="text-primary">For Global market</span>
             </h1>
 
             {/* Subheadline */}

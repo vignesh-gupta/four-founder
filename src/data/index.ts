@@ -71,7 +71,7 @@ export const usps: USP[] = [
   {
     id: "certifications",
     title: "Export Certifications",
-    description: "FSSAI, APEDA certified with full documentation support for international trade",
+    description: "GST, FSSAI & Export Code (User Progress) with full documentation support for international trade",
     icon: "shield-check"
   },
   {
@@ -124,12 +124,6 @@ export const exportCapabilities: ExportCapability[] = [
     title: "Direct UAE Delivery",
     description: "Established shipping routes to major UAE ports including Dubai and Abu Dhabi",
     icon: "ship"
-  },
-  {
-    id: "certificates",
-    title: "Phytosanitary Certificates",
-    description: "Complete documentation including health certificates and origin certificates",
-    icon: "file-text"
   },
   {
     id: "packaging",
