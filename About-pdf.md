@@ -8,6 +8,7 @@ Premium • Natural • Sustainable • Unified
 
 ## 🌱 **Short Introduction**
 
+
 Four Founders Garlic Company is built on the shared passion and dedication of four individuals who believed in growing garlic the right way—naturally, sustainably, and with integrity. From carefully selected varieties to meticulous farming practices, our garlic is rooted in tradition and grown with unity. With every harvest, we bring bold flavor, exceptional quality, and the strength of four founders working as one.
 
 ---
